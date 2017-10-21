@@ -314,12 +314,7 @@ export default {
 
 <style lang="scss">
 @import "../utility.scss";
-h1 {
-  text-align: center;
-  font-size: 1.8em;
-  font-family: monospace;
-  padding: 0.7em;
-}
+
 
 .keyboard {
     text-align: center;
