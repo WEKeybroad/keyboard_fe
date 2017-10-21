@@ -11,13 +11,18 @@
                     <router-link to="/">
                         <a v-on:click="to_mac" v-bind:class="{tab_light: mac}">Mac</a>
                     </router-link>
+<<<<<<< HEAD
                     丨
+=======
+                    <span> | </span>
+>>>>>>> ee1c01024b510eefcf2665bf882744fa8bf3d557
                     <router-link to="/windows">
                         <a v-on:click="to_windows" v-bind:class="{tab_light: !mac}">Windows</a>
                     </router-link>
                 </div>
                 <div class="search_all">
                 <div class="text_box">
+<<<<<<< HEAD
                  <div class="chooseKind">
                     <select v-model="selected">
                         <option value="common">common</option>
@@ -38,6 +43,21 @@
                 </div>
                 <div class="descript_word" >
                       {{descript_word}}
+=======
+                    <div class="drag_list inline_block full_height vertical_align">
+                        <select v-model="group" class="select full_height full_width">
+                            <option value="common">通用</option>
+                            <option value="indesign">Indesign</option>
+                            <option value="ps">PhotoShop</option>
+                        </select>
+                    </div>
+                    <input type="text" v-model.trim="input_word" placeholder="请输入你想搜索的快捷键" class="input_box inline_block full_height vertical_align">
+                    <div v-on:click="search" class="icon_box inline_block full_height vertical_align">
+                        <svg viewBox="0 0 200 200" class="icon">
+                                <use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#search_icon"></use>
+                        </svg>
+                    </div>
+>>>>>>> ee1c01024b510eefcf2665bf882744fa8bf3d557
                 </div>
                 </div>
                 
@@ -58,6 +78,7 @@
 </template>
 
 <script>
+
 import Mac from "./mac.vue";
 import Windows from "./win.vue";
 export default {
@@ -122,6 +143,7 @@ export default {
           });
         } else {
             this.warn();
+
         }
       });
     },
@@ -133,6 +155,7 @@ export default {
 </script>
 
 <style lang="scss">
+<<<<<<< HEAD
 // @mixin size($width,$height){
 //     width: ($width/1200*100%);
 //     height: ($height/650*100%);
@@ -235,4 +258,5 @@ input {
 .list_item{
     height: 38px;
 }
+
 </style>
