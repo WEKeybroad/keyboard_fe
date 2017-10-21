@@ -36,7 +36,7 @@
                 <div class="descript_word">
                     {{descript_word}}
                 </div>
-                 <router-view :keys="this.keys"></router-view>
+                 <router-view :light="this.light"></router-view>
             </div>
         </div>
         <div class="right inline_block" v-if="!this.warn">
@@ -79,12 +79,15 @@
             to_windows() {
                 this.mac = false;
             },
+            light() {
+                this.$emit('keys',"haha")
+            },
             send() {
                 let system = "Win";
                 if (this.mac == true) {
                     system = "Mac";
                 }
-                fetch('http://120.77.246.73:5003/key/', {
+                fetch('http://120.77.246.73:5003/api/key/', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -100,12 +103,12 @@
                         else {
                             this.warn_text = true
                             this.list = []
-                            console.log(res.ok)
                             }
                         }).then (res => {
                             this.items = res.one
                             this.list = res.more
                             this.warn_text = false
+                             this.$emit('update', this.items);
                         })
             },
             onekey(selected, input) {
