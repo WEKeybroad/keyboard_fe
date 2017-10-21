@@ -12,12 +12,12 @@ const templateRoot = path.join(__dirname, "../dist/template")
 app.use(userAgent);
 
 router.get('/', function(ctx, next){
-        let template = swig.compileFile(path.resolve(templateRoot, "mac.html"));
+        let template = swig.compileFile(path.resolve(templateRoot, "index.html"));
         ctx.body = template({})
 });
 
-router.get('/win', function(ctx, next){
-    let template = swig.compileFile(path.resolve(templateRoot, "windows.html"));
+router.get('/windows', function(ctx, next){
+    let template = swig.compileFile(path.resolve(templateRoot, "index.html"));
     ctx.body = template({})
 });
 

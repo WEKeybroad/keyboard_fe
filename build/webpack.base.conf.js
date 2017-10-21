@@ -13,8 +13,7 @@ function resolve(dir) {
 
 module.exports = {
     entry: {
-        'mac': ['./src/mac.js'],
-        'win': ['./src/windows.js'],
+        'index': ['./src/index.js']
         // vendor: ["vue", "whatwg-fetch", "vuelidate", "vue-router"]
     },
     output: {
@@ -89,17 +88,10 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             alwaysWriteToDisk: true,
-            filename: 'template/mac.html',
+            filename: 'template/index.html',
             inject: false,
-            template: path.join(__dirname, '../template/mac.ejs'),
-            chunks: ['mac']
-        }),
-        new HtmlWebpackPlugin({
-            alwaysWriteToDisk: true,
-            filename: 'template/windows.html',
-            inject: false,
-            template: path.join(__dirname, '../template/windows.ejs'),
-            chunks: ['win']
+            template: path.join(__dirname, '../template/index.ejs'),
+            chunks: ['index']
         }),
         new HtmlWebpackHarddiskPlugin()
     ]
