@@ -1,6 +1,6 @@
 <template>
   <div>
-    hahahah
+    
   </div>
 </template>
 <script>
@@ -13,6 +13,7 @@ export default {
   components: {
     
   },
+  props:['keys'],
   methods: {
     
   }
