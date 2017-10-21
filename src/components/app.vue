@@ -19,7 +19,7 @@
                     </div>
                     <div class="search_icon"></div>
                 </div>
-                <router-view> </router-view>
+                <router-view></router-view>
             </div>
         </div>
         <div class="right inline_block">
