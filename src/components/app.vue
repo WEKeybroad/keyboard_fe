@@ -43,7 +43,7 @@
                 </div>
                 <div class="descript_word" >
                       {{descript_word}}
-=======
+<!-- =======
                     <div class="drag_list inline_block full_height vertical_align">
                         <select v-model="group" class="select full_height full_width">
                             <option value="common">通用</option>
@@ -57,7 +57,7 @@
                                 <use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#search_icon"></use>
                         </svg>
                     </div>
->>>>>>> ee1c01024b510eefcf2665bf882744fa8bf3d557
+>>>>>>> ee1c01024b510eefcf2665bf882744fa8bf3d557 -->
                 </div>
                 </div>
                 
