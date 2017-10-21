@@ -4,10 +4,10 @@
             <div class="left inline_block">
                 <div class="tab">
                     <router-link to="/">
-                        <a v-on:click="to_mac" v-bind:class="{highlight: mac}">Mac</a>
+                        <a v-on:click="to_mac" v-bind:class="{tab_light: mac}">Mac</a>
                     </router-link>
                     <router-link to="/windows">
-                        <a v-on:click="to_windows" v-bind:class="{ highlight: !mac}">Windows</a>
+                        <a v-on:click="to_windows" v-bind:class="{tab_light: !mac}">Windows</a>
                     </router-link>
                 </div>
                 <div class="text_box">
@@ -15,7 +15,7 @@
                     <div class="icon_box">
                         <svg viewBox="0 0 200 200" class="icon">
                                 <use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#search_icon"></use>
-                            </svg>
+                        </svg>
                     </div>
                     <div class="search_icon"></div>
                 </div>
@@ -34,7 +34,7 @@
     export default {
         data() {
             return {
-    
+                mac: true
             };
         },
         components: {
@@ -45,7 +45,7 @@
             to_mac() {
                 this.mac = true
             },
-            o_windows() {
+            to_windows() {
                 this.mac = false
             }
         }
