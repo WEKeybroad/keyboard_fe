@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './components/mac.vue'
+import App from './components/app.vue'
 import style from './main.scss'
 import VueRouter from 'vue-router'
 import Mac from './components/mac.vue'

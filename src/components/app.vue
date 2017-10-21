@@ -14,12 +14,12 @@
                     <input type="text" placeholder="快捷键" class="input_box">
                     <div class="icon_box">
                         <svg viewBox="0 0 200 200" class="icon">
-                            <use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#search_icon"></use>
-                        </svg>
+                                <use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#search_icon"></use>
+                            </svg>
                     </div>
-                     <div class="search_icon"></div>
+                    <div class="search_icon"></div>
                 </div>
-                 <router-view>  </router-view>
+                <router-view> </router-view>
             </div>
         </div>
         <div class="right inline_block">
@@ -29,14 +29,25 @@
 </template>
 
 <script>
+    import Mac from './mac.vue'
+    import Windows from './win.vue'
     export default {
         data() {
             return {
     
             };
         },
+        components: {
+            "mac": Mac,
+            "windows": Windows
+        },
         methods: {
-    
+            to_mac() {
+                this.mac = true
+            },
+            o_windows() {
+                this.mac = false
+            }
         }
     };
 </script>
