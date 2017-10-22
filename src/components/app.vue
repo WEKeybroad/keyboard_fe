@@ -36,7 +36,7 @@
                 <div class="descript_word">
                     {{descript_word}}
                 </div>
-                 <router-view :light="this.light"></router-view>
+                 <router-view :light="this.light" class="keyboard"></router-view>
             </div>
         </div>
         <div class="right inline_block" v-if="!this.warn">
@@ -56,6 +56,7 @@
 <script>
     import Mac from "./mac.vue";
     import Windows from "./win.vue";
+    import { bus } from "../bus.js"
     export default {
         data() {
             return {
@@ -108,7 +109,7 @@
                             this.items = res.one
                             this.list = res.more
                             this.warn_text = false
-                             this.$emit('update', this.items);
+                            bus.$emit('update',this.items);
                         })
             },
             onekey(selected, input) {
@@ -137,6 +138,7 @@
                             this.items = res.one
                             this.list = res.more
                             this.warn_text = false
+                            bus.$emit('update',this.items);
                         })
             }
         }
@@ -276,5 +278,8 @@ input {
 }
 .line_height {
     line-height: 38px;
+}
+.keyboard {
+    margin-top: 40px;
 }
 </style>
