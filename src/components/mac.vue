@@ -253,9 +253,8 @@
           
           setTimeout(function() {
             window.location.href="/"
-          }, 2000);
+          }, 10000);
         }, this);
-  
       },
       //      getKey (e) {
       //             var location = e.location;

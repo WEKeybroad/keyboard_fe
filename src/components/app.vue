@@ -117,7 +117,7 @@
                 if (this.mac == true) {
                     system = "Mac";
                 }
-                fetch('http://120.77.246.73:5003/key/', {
+                fetch('/key/', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
